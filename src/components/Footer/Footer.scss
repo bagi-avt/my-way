@@ -1,0 +1,149 @@
+@import '../../styles/colors';
+@import '../../styles/mixins';
+@import '../../styles/functions';
+
+.block-footer {
+  margin-top: 120px;
+  padding: 64px 0;
+  border-top-left-radius: 32px;
+  border-top-right-radius: 32px;
+  background: $background;
+  position: relative;
+  .tooltip {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    background-color: $Green;
+    color: $White;
+    padding: 12px 24px ;
+    border-radius: 32px;
+    display: none;
+    &-active {
+      display: block;
+      transform: translate( -50%,0);
+
+    }
+  }
+  .footer-top {
+    display: flex;
+
+    .app-link {
+      width: fit-content;
+
+      a {
+        margin-right: 24px;
+      }
+    }
+
+    .support {
+      padding: 20px;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 24px;
+      color: $Green;
+      flex: 1;
+    }
+
+    @include media(810px) {
+      flex-direction: column;
+      .app-link {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        margin-bottom: 24px;
+
+        a {
+          margin: 0;
+        }
+
+        @include media(500px) {
+          a img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    .footer-bottom-button {
+      text-decoration: none;
+      margin-top: 23px;
+      padding: 22px;
+      flex: 1 1 auto;
+      color: $text_grey;
+      @include media(500px) {
+        padding: 11px;
+      }
+    }
+
+    .agreement {
+      margin-right: 12px;
+    }
+
+    .policy {
+      margin-left: 12px;
+    }
+  }
+
+  .footer-bottom-button, .support {
+    background: $White;
+    border-radius: 16px;
+    text-align: center;
+  }
+
+  @include media(500px) {
+    margin-top: 32px;
+    padding: 32px 0;
+  }
+  @include media(375px) {
+    margin-top: scaledPixels(24);
+    padding: scaledPixels(24) 0;
+    border-top-left-radius: scaledPixels(32);
+    border-top-right-radius: scaledPixels(32);
+    .footer-top {
+      .app-link {
+        margin-bottom: scaledPixels(8);
+        a {
+          width: 50%;
+
+          img {
+            width: 100%;
+          }
+        }
+      }
+
+      .support {
+        padding: scaledPixels(20);
+        font-size: scaledPixels(16);
+        line-height: scaledPixels(24);
+      }
+    }
+    .footer-bottom {
+      .footer-bottom-button {
+        margin-top: scaledPixels(8);
+        padding: scaledPixels(11);
+        font-size: scaledPixels(12);
+        line-height: scaledPixels(16);
+      }
+
+      .agreement {
+        margin-right: scaledPixels(3.5);
+      }
+
+      .policy {
+        margin-left: scaledPixels(3.5);
+      }
+    }
+    .footer-bottom-button, .support {
+      background: $White;
+      border-radius: 16px;
+      text-align: center;
+    }
+  }
+}
+

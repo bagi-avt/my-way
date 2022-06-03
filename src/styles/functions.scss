@@ -1,0 +1,3 @@
+@function scaledPixels($sourcePixels) {
+  @return calc((#{$sourcePixels} * 100vw) / 375);
+}

@@ -1,0 +1,95 @@
+@import '../../styles/colors';
+@import '../../styles/mixins';
+@import '../../styles/functions';
+
+.tariff {
+  &-list {
+    display: flex;
+    justify-content: center;
+  }
+  &-item {
+    list-style-type: none;
+    background-color: $White;
+    margin: 0 12px;
+    border-radius: 24px;
+    border: 3px solid #ECECEC;
+    padding: 24px;
+    font-style: normal;
+    font-weight: 500;
+    color: $black;
+    width: 149px;
+    @include media(850px) {
+      padding: 20px;
+    }
+      &-active {
+      border: 3px solid #9B84FB;
+    }
+    &_time {
+      font-size: 20px;
+      line-height: 24px;
+      margin-top: 24px;
+    }
+    &_price {
+      font-size: 40px;
+      line-height: 40px;
+      margin-top: 8px;
+      margin-bottom: 45px;
+    }
+    &_description {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+  &-saving {
+    position: relative;
+    overflow: hidden;
+    color: $Green;
+    &:before {
+      content: 'Экономия 56%';
+      color: $black;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 126px;
+      height: 32px;
+      text-align: center;
+      line-height: 32px;
+      background-color: $menu_yellow;
+      border-bottom-right-radius: 24px;
+      padding-right: 6px;
+    }
+  }
+  @include media(375px) {
+    &-item {
+      margin: 0 scaledPixels(4.5);
+      border-radius: scaledPixels(24);
+      padding: scaledPixels(16);
+      &_time {
+        font-size: scaledPixels(20);
+        line-height: scaledPixels(24);
+      }
+      margin-top: scaledPixels(24);
+      &_price {
+        font-size: scaledPixels(32);
+        line-height: scaledPixels(24);
+        margin-top: scaledPixels(16);
+        margin-bottom: scaledPixels(61);
+      }
+      &_description {
+        font-size: scaledPixels(14);
+        line-height: scaledPixels(16);
+      }
+    }
+    &-saving {
+      &:before {
+        width: scaledPixels(120);
+        height: scaledPixels(32);
+        font-size: scaledPixels(14);
+        line-height: scaledPixels(32);
+        font-weight: bold;
+        border-bottom-right-radius: scaledPixels(24);
+        padding-right: scaledPixels(6);
+      }
+    }
+  }
+}
