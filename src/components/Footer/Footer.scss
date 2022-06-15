@@ -108,8 +108,9 @@
     .footer-top {
       .app-link {
         margin-bottom: scaledPixels(8);
+        justify-content: space-between;
         a {
-          width: 50%;
+          width: calc(50% - scaledPixels(3));
 
           img {
             width: 100%;

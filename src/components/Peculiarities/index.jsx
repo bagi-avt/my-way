@@ -29,8 +29,8 @@ const Peculiarities = () => {
                             <h3 className="section-peculiarities-item_big_left-title">Статистика и графики</h3>
                             <p className="section-peculiarities-item_big_left-text">Получайте полный обзор вашего прогресса</p>
                         </div>
-                        <div className="section-peculiarities-item_big_right"
-                             style={{backgroundImage: `url(${require('assets/peculiarities.svg').default})`}}/>
+                        <div className="section-peculiarities-item_big_right peculiarities-bg-desktop"
+                             style={{backgroundImage: `url(${require('assets/peculiarities.png')})`}}/>
                         <div className="section-peculiarities-item_big_right section-peculiarities-item_big_right-mobile"
                             style={{backgroundImage: `url(${require('assets/peculiarities-mobile.svg').default})`}}/>
                     </div>

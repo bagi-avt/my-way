@@ -27,7 +27,8 @@ const Popup = ({active, setActive, tariffActive, setTariffActive}) => {
     return (
         <div className={classNames("popup", {active: active})} onClick={() => setActive(false)}>
             <div className="popup-content" onClick={e => e.stopPropagation()}>
-                <header>
+                <header className='popup-content-header'>
+                    {step === 2 && <img src={Arrow} alt="Arrow" className="popup-content-header-back popup-content-header-back_mobile" onClick={() => setStep(1)}/>}
                     <img src={Logo} alt="logo"/>
                 </header>
                 <div className="popup-close" style={{backgroundImage: `url(${require('assets/close.svg').default})`}}
@@ -46,7 +47,7 @@ const Popup = ({active, setActive, tariffActive, setTariffActive}) => {
                     />
                     <button className="popup-button cursor" onClick={() => {
                         setStep(2)
-                    }}>Продлжить
+                    }}>Продолжить
                     </button>
                     <p className="popup-text">
                         Нажимая на кнопку «Продолжить», я принимаю условия
@@ -64,7 +65,7 @@ const Popup = ({active, setActive, tariffActive, setTariffActive}) => {
                 </div>
                 <div className={classNames("step step_sms", {"step-active": step === 2})}>
                     <h3 className="popup-title popup-title-answer">
-                        <img src={Arrow} alt="Arrow" onClick={() => setStep(1)}/>
+                        <img src={Arrow} alt="Arrow" className='popup-content-back popup-content-back_desktop' onClick={() => setStep(1)}/>
                         Введите код из СМС</h3>
                     <label htmlFor="answerInput" className="answer-list">
                         <span className="answer-item">{answer[0]}</span>
@@ -80,7 +81,7 @@ const Popup = ({active, setActive, tariffActive, setTariffActive}) => {
                     </div>
                 </div>
                 <div className={classNames("step step_tariff", {"step-active": step === 3})}>
-                    <h3 className="popup-title">Выберите тариф</h3>
+                    <h3 className="popup-title popup-title-tariff">Выберите тариф</h3>
                     <Tariff className='popup-tariff' active={tariffActive} setActive={setTariffActive}/>
                     <button className="popup-button" onClick={() => close()}>Оформить подписку</button>
                     <div className="popup-text">
@@ -93,7 +94,7 @@ const Popup = ({active, setActive, tariffActive, setTariffActive}) => {
                             onMouseLeave={() => setTooltipActive(false)}
                             onTouch={() => setTooltipActive(true)}
                         >Подробнее...</span>
-                        {tooltipActive && <div className="popup-text-tooltip">
+                        {tooltipActive && <div className="popup-text-tooltip text-tooltip">
                             По указанным вами платежным реквизитам будет производится списание абонентской платы за
                             подписку на регулярной и периодической основе в зависимости от типа плана подписки, который
                             вы выбираете при покупке подписки. <br/>
@@ -102,7 +103,7 @@ const Popup = ({active, setActive, tariffActive, setTariffActive}) => {
                             Вы соглашаетесь с тем, что для отмены периодической подписки вам необходимо сделать это до
                             следующей даты продления. В противной случае очередной платеж будет списан.<br/>
                             Вы можете отменить продление подписки через данную страницу нажав на "Отмена подписки", либо
-                            связавшись с Компанией по адресу <span>support@smartsolutionsapps.ru.</span>
+                            связавшись с Компанией по адресу <span className="text-tooltip__email text-tooltip-email">support@smartsolutionsapps.ru.</span>
                             Вы не получите возврат абонентской платы, которую Вы уже внесли за текущий период подписки,
                             и Вы сможете получить доступ к Сервису до окончания текущего периода подписки.
                             <button className="popup-button" onClick={() => {

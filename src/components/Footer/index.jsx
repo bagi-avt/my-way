@@ -14,7 +14,7 @@ const Footer = () => {
                 <footer>
                     <div className="footer-top">
                         <div className="app-link">
-                            <a href="https://www.google.ru">
+                            <a href="https://play.google.com/store/apps/details?id=io.decentury.myway">
                                 <img src={GooglePlay} alt="GooglePlay"/>
                             </a>
                             <a href="https://www.google.ru">
