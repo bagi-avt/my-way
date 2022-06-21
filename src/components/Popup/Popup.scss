@@ -1,9 +1,7 @@
 @import '../../styles/colors';
 @import '../../styles/mixins';
 @import '../../styles/functions';
-//@function scaledPixels($sourcePixels) {
-//  @return calc((#{$sourcePixels} * 100vw) / 750);
-//}
+
 .popup {
   height: 100vh;
   width: 100vw;
@@ -102,12 +100,28 @@
       color: $black;
     }
   }
+  &-cancel_button {
+    color: $Red;
+    margin-top: 32px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    @include media(375px) {
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      font-size: scaledPixels(16);
+      line-height: scaledPixels(24);
+      bottom: scaledPixels(-40);
+      left: 0;
+    }
+  }
   &-text {
     font-weight: 500;
     font-size: 12px;
     line-height: 16px;
     color: $text_grey;
-    margin-top: 24px;
+    margin-top: 32px;
     text-align: center;
     position: relative;
     a {
@@ -155,6 +169,72 @@
         }
       }
     }
+  }
+  .cancel-popup {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 59;
+    .popup-content {
+      max-width: 326px;
+      min-width: 326px;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 32px;
+      text-align: center;
+      color: $black;
+      flex-direction: column;
+    }
+    &-control {
+      display: flex;
+      margin-top: 24px;
+    }
+    &-button {
+      margin-right:4.5px;
+      border-radius: 34px;
+      background: $Red;
+      padding: 16px 29px;
+      flex: 1;
+      font-size: 16px;
+      line-height: 24px;
+      color: $White;
+    }
+    .green {
+      margin-right:0;
+      margin-left:4.5px;
+      background-color: $Green;
+    }
+    @include media(375px) {
+      height: 100vh;
+      width: 100vw; 
+      align-items: flex-end;
+      .popup-content {
+        max-width: 100%;
+        padding: scaledPixels(22);
+        border-top-left-radius:scaledPixels(32);
+        border-top-right-radius: scaledPixels(32);
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+      &-control {
+        display: flex;
+        width: 100%;
+      }
+      &-button {
+        border-radius: scaledPixels(34);
+        display: block;
+        padding: scaledPixels(16);
+        font-size: scaledPixels(16);
+        line-height: scaledPixels(24);
+      }
+    }
+
   }
   .answer {
     &-list {
@@ -278,8 +358,8 @@
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
         font-weight: 500;
-        font-size: scaledPixels(14);//14px;
-        line-height: scaledPixels(20);//20px;
+        font-size: scaledPixels(14);
+        line-height: scaledPixels(20);
         z-index: 2;
         background: $White;
         color: $text_grey;

@@ -12,6 +12,7 @@ const Popup = ({active, setActive, tariffActive, setTariffActive}) => {
     const [tel, setTel] = useState('');
     const [answer, setAnswer] = useState('')
     const [tooltipActive, setTooltipActive] = useState(false)
+    const [cancelActive, setCancelActive] = useState(false)
     const onPhone = (e) => {
         onPhoneInput(e, setTel)
     }
@@ -84,6 +85,26 @@ const Popup = ({active, setActive, tariffActive, setTariffActive}) => {
                     <h3 className="popup-title popup-title-tariff">Выберите тариф</h3>
                     <Tariff className='popup-tariff' active={tariffActive} setActive={setTariffActive}/>
                     <button className="popup-button" onClick={() => close()}>Оформить подписку</button>
+                    <button className="popup-cancel_button"  onClick={() => setCancelActive(true)}>Отменить подписку</button>
+                    {cancelActive && <div className='cancel-popup'>
+                        <div className='popup-content'>
+                            <div className="popup-close" style={{backgroundImage: `url(${require('assets/close.svg').default})`}}
+                            onClick={() => {
+                                setCancelActive(false)
+                            }}/>
+                            Вы уверены, что хотите отменить подписку?
+                            <div className='cancel-popup-control'>
+                                <button  className='cancel-popup-button' onClick={() => {
+                                setCancelActive(false)
+                                close()
+                            }}>Да, отменить</button>
+                                <button  className='cancel-popup-button green'  onClick={() => {
+                                setCancelActive(false)
+                            }}>Нет, оставить</button>
+                            </div>
+                        </div>
+                        </div>
+                    }
                     <div className="popup-text">
                         Нажимая Оформить подписку /подтверждая подписку, вы соглашаетесь на списание Компанией указанной
                         суммы, а также даете согласие на периодическое списание Компанией будущих платежей по подписке
