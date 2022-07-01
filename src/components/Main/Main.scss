@@ -7,7 +7,7 @@
   border-bottom-left-radius: 32px;
   border-bottom-right-radius: 32px;
   &-title {
-    padding-top: 24px;
+    padding-top: 48px;
     max-width: 713px;
     margin: 0 auto;
   }
@@ -47,7 +47,7 @@
       text-align: left;
     }
     &-button {
-      margin: scaledPixels(32) auto;
+      margin: scaledPixels(24) auto;
       padding: scaledPixels(16) scaledPixels(32);
       border-radius: scaledPixels(34);
       font-size: scaledPixels(16);
@@ -61,6 +61,7 @@
       font-weight: 600;
       font-size: scaledPixels(14);
       line-height: scaledPixels(20);
+      padding-top: scaledPixels(24);
       color: $black;
       opacity: 0.7;
     }

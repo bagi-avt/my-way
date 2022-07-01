@@ -57,6 +57,7 @@
     }
     &_right {
       flex: 1;
+      background-size: contain;
       &-mobile {
         display: none;
         background-size: cover;
@@ -79,7 +80,7 @@
       &_right {
         min-height: 360px;
         background-repeat: no-repeat;
-        background-position: center;
+        background-position: bottom;
       }
     }
   }
@@ -129,7 +130,7 @@
       }
       &_right {
         display: none;
-        min-height: 500px;
+        min-height: scaledPixels(510);
         background-position: bottom;
         &-mobile {
           display: block;

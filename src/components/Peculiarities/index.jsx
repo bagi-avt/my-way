@@ -32,7 +32,7 @@ const Peculiarities = () => {
                         <div className="section-peculiarities-item_big_right peculiarities-bg-desktop"
                              style={{backgroundImage: `url(${require('assets/peculiarities.png')})`}}/>
                         <div className="section-peculiarities-item_big_right section-peculiarities-item_big_right-mobile"
-                            style={{backgroundImage: `url(${require('assets/peculiarities-mobile.svg').default})`}}/>
+                            style={{backgroundImage: `url(${require('assets/peculiarities-mobile.png')})`}}/>
                     </div>
                 </div>
             </div>

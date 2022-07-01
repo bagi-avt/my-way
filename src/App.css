@@ -29,6 +29,11 @@ button {
 }
 @font-face {
   font-family: SF;
+  src: url(/src/fonts/SFProDisplay-Bold.ttf);
+  font-weight: 700;
+}
+@font-face {
+  font-family: SF;
   src: url(/src/fonts/SFProDisplay-Semibold.ttf);
   font-weight: 600;
 }

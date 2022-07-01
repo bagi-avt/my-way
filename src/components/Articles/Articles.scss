@@ -8,7 +8,7 @@
     background-color: $background;
     border-radius: 24px;
     min-height: 360px;
-    margin-top: 50px;
+    margin-top: 64px;
     &_left {
       margin: 56px 38px 56px 64px;
       max-width: 352px;
@@ -27,6 +27,7 @@
     }
     &_right {
       flex: 1;
+      background-size: contain;
       &-mobile {
         display: none;
         background-size: cover;
@@ -49,7 +50,7 @@
       &_right {
         min-height: 360px;
         background-repeat: no-repeat;
-        background-position: center;
+        background-position: bottom;
       }
     }
     @include media(375px) {
@@ -63,6 +64,7 @@
           line-height: scaledPixels(24);
           text-align: left;
           margin-bottom: scaledPixels(8);
+          margin-top: 0;
         }
         &-text {
           font-size: scaledPixels(14);
@@ -77,7 +79,7 @@
           display: block;
           background-size: cover;
           background-position: bottom;
-          min-height: scaledPixels(470);
+          min-height: scaledPixels(464);
         }
       }
     }

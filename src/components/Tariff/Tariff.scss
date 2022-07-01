@@ -6,13 +6,14 @@
   &-list {
     display: flex;
     justify-content: center;
+    margin: 24px 0;
   }
   &-item {
     list-style-type: none;
     background-color: $White;
     margin: 0 12px;
     border-radius: 24px;
-    border: 3px solid #ECECEC;
+    box-shadow: 0 0 0 3px #ECECEC;
     padding: 24px;
     font-style: normal;
     font-weight: 500;
@@ -22,7 +23,7 @@
       padding: 20px;
     }
       &-active {
-      border: 3px solid #9B84FB;
+      box-shadow: 0 0 0 3px #9b84fb;
     }
     &_time {
       font-size: 20px;
@@ -60,15 +61,18 @@
     }
   }
   @include media(375px) {
+    &-list{
+      margin-top: scaledPixels(16);
+    }
     &-item {
       margin: 0 scaledPixels(4.5);
       border-radius: scaledPixels(24);
-      padding: scaledPixels(16);
+      padding: scaledPixels(13) scaledPixels(16);
       &_time {
         font-size: scaledPixels(20);
         line-height: scaledPixels(24);
       }
-      margin-top: scaledPixels(24);
+      margin-top: 0;
       &_price {
         font-size: scaledPixels(32);
         line-height: scaledPixels(24);
