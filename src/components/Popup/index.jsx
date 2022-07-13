@@ -124,7 +124,7 @@ const Popup = ({active, setActive, tariffActive, setTariffActive}) => {
                             Вы соглашаетесь с тем, что для отмены периодической подписки вам необходимо сделать это до
                             следующей даты продления. В противной случае очередной платеж будет списан.<br/>
                             Вы можете отменить продление подписки через данную страницу нажав на "Отмена подписки", либо
-                            связавшись с Компанией по адресу <span className="text-tooltip__email text-tooltip-email">support@smartsolutionsapps.ru.</span>
+                            связавшись с Компанией по адресу <span className="text-tooltip__email text-tooltip-email">support@smartsolutionsapps.ru.</span><br/>
                             Вы не получите возврат абонентской платы, которую Вы уже внесли за текущий период подписки,
                             и Вы сможете получить доступ к Сервису до окончания текущего периода подписки.
                             <button className="popup-button" onClick={() => {

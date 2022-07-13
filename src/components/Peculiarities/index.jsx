@@ -2,6 +2,8 @@ import React from 'react';
 
 import CloseSquare from 'assets/close-square.svg';
 import Chat from 'assets/chat.svg';
+import PeculiaritiesImg from 'assets/peculiarities.png';
+import PeculiaritiesMobileImg from 'assets/peculiarities-mobile.png';
 
 import './Peculiarities.scss'
 
@@ -29,10 +31,12 @@ const Peculiarities = () => {
                             <h3 className="section-peculiarities-item_big_left-title">Статистика и графики</h3>
                             <p className="section-peculiarities-item_big_left-text">Получайте полный обзор вашего прогресса</p>
                         </div>
-                        <div className="section-peculiarities-item_big_right peculiarities-bg-desktop"
-                             style={{backgroundImage: `url(${require('assets/peculiarities.png')})`}}/>
-                        <div className="section-peculiarities-item_big_right section-peculiarities-item_big_right-mobile"
-                            style={{backgroundImage: `url(${require('assets/peculiarities-mobile.png')})`}}/>
+                        <div className="section-peculiarities-item_big_right peculiarities-bg-desktop">
+                            <img src={PeculiaritiesImg} alt="PeculiaritiesImg"/>
+                        </div>
+                        <div className="section-peculiarities-item_big_right section-peculiarities-item_big_right-mobile">
+                            <img src={PeculiaritiesMobileImg} alt="PeculiaritiesMobileImg"/>
+                        </div>
                     </div>
                 </div>
             </div>

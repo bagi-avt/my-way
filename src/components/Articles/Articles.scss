@@ -27,7 +27,11 @@
     }
     &_right {
       flex: 1;
-      background-size: contain;
+      max-width: 408px;
+      display: flex;
+      img {
+        width: 100%;
+      }
       &-mobile {
         display: none;
         background-size: cover;
@@ -48,6 +52,7 @@
         }
       }
       &_right {
+        margin: 0 auto;
         min-height: 360px;
         background-repeat: no-repeat;
         background-position: bottom;

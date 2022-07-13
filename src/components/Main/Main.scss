@@ -41,6 +41,7 @@
       padding-top: scaledPixels(8);
     }
     &-text {
+      max-width: scaledPixels(300);
       margin-top: scaledPixels(16);
       font-size: scaledPixels(16);
       line-height: scaledPixels(20);
