@@ -9,7 +9,7 @@ import classNames from "classnames";
 const Footer = () => {
     const [tooltipActive, setTooltipActive] = useState(false)
     return (
-        <div className="block-footer">
+        <div className="block-footer" id="footer">
             <div className="container">
                 <footer>
                     <div className="footer-top">
@@ -17,7 +17,7 @@ const Footer = () => {
                             <a href="https://play.google.com/store/apps/details?id=io.decentury.myway">
                                 <img src={GooglePlay} alt="GooglePlay"/>
                             </a>
-                            <a href="https://www.google.ru">
+                            <a href="https://apps.apple.com/ru/app/my-way-%D1%82%D1%80%D0%B5%D0%BA%D0%B5%D1%80-%D0%BF%D1%80%D0%B8%D0%B2%D1%8B%D1%87%D0%B5%D0%BA/id1602599041">
                                 <img src={AppStore} alt="AppStore"/>
                             </a>
                         </div>

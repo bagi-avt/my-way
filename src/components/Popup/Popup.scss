@@ -305,6 +305,15 @@
       margin-left: 4.5px;
     }
   }
+  &-error {
+    color: $Red;
+    margin-bottom: 12px;
+    font-size: 12px;
+  }
+  &-download {
+    color: $Blue;
+    cursor: pointer;
+  }
   @include media(375px) {
     height: 100vh;
     width: 100vw;
